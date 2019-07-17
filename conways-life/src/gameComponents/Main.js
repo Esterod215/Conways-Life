@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Grid from './Grid'
 import './game.css'
+
+
  
 class Main extends Component {
     constructor(){
@@ -13,6 +15,9 @@ class Main extends Component {
             grid: Array(this.rows).fill().map(() => Array(this.columns).fill(false))
         }
     }
+    componentDidMount(){
+        this.seed()
+    }
     selectBox = (row,col) => {
         let gridCopy = arrayClone(this.state.grid);
         gridCopy[row][col] = !gridCopy[row][col]
@@ -21,22 +26,20 @@ class Main extends Component {
         })
     }
 
-    // seed = () => {
-    //     let gridCopy = arrayClone(this.state.grid);
-    //     for(let i = 0; i < this.rows;) {
-    //         for(let j = 0; j < this.columns; j++) {
-    //             if(Math.floor(Math.random() * 4 === 1)) {
-    //                 gridCopy[i][j] = true;
-    //             }
-    //         }
-    //     }
-    //     this.setState({
-    //         grid:gridCopy
-    //     });
-    // }
-    // componentDidMount() {
-    //     this.seed();
-    // }
+    seed = () => {
+        let gridCopy = arrayClone(this.state.grid);
+        for(let i = 0; i < this.rows; i++) {
+            for(let j = 0; j < this.columns; j++) {
+                if(Math.floor(Math.random() * 4) === 1) {
+                    gridCopy[i][j] = true;
+                }
+            }
+        }
+        this.setState({
+            grid: gridCopy
+        });
+    }
+    
 
     render() {
         return (
