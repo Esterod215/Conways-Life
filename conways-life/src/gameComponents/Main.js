@@ -56,8 +56,9 @@ class Main extends Component {
         let clearGrid = Array(this.rows).fill().map(() => Array(this.columns).fill(false));
         this.setState({
             grid: clearGrid,
-            generation: 0
+            generations: 0
         })
+        this.pause();
         
     }
 
