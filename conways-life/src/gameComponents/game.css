@@ -40,3 +40,16 @@ h1,h2,h3,h4{
 h4{
     margin-top: 0px;
 }
+.buttons{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+button{
+    width: 80px;
+    height: 30px;
+    background-color: purple;
+    color: white;
+}
