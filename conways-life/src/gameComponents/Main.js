@@ -92,6 +92,7 @@ class Main extends Component {
         return (
             <div>
                 <h1>Game Of Life</h1>
+                <p>(Seed and start to see Conway's Game Of Life in action!)</p>
                 <Grid 
                     grid = {this.state.grid}
                     rows = {this.rows}
