@@ -53,13 +53,12 @@ class Main extends Component {
         clearInterval(this.state.intervalId);
     }
     clear = () => {
-        clearInterval(this.state.intervalId)
-        let gridCopy = arrayClone(this.state.grid);
-        for(let i = 0; i < this.rows; i++) {
-            for(let j = 0; j < this.columns; j++) {
-                gridCopy[i][j] = false;
-            }
-        }
+        let clearGrid = Array(this.rows).fill().map(() => Array(this.columns).fill(false));
+        this.setState({
+            grid: clearGrid,
+            generation: 0
+        })
+        
     }
 
     play = () => {
