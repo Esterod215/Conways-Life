@@ -52,6 +52,7 @@ class Main extends Component {
     pause = () => {
         clearInterval(this.state.intervalId);
     }
+    
     clear = () => {
         let clearGrid = Array(this.rows).fill().map(() => Array(this.columns).fill(false));
         this.setState({
@@ -61,6 +62,7 @@ class Main extends Component {
         this.pause();
         
     }
+    
 
     play = () => {
         let g = this.state.grid;
@@ -92,7 +94,13 @@ class Main extends Component {
         return (
             <div>
                 <h1>Game Of Life</h1>
-                <p>(Seed and start to see Conway's Game Of Life in action!)</p>
+                <h2>Rules Of The Game:</h2>
+                <ol>
+                    <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+                    <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+                    <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+                    <li>Any dead cell with three live neighbours becomes a live cell, as if by reproduction.</li>
+                </ol>
                 <Grid 
                     grid = {this.state.grid}
                     rows = {this.rows}
@@ -105,6 +113,7 @@ class Main extends Component {
                 <button onClick = {this.pause}>Pause</button>
                 <button onClick = {this.clear}>Clear</button>
                 <button onClick={this.seed}>Seed</button>
+                
                 </div>
             </div>
         )
