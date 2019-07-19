@@ -1,0 +1,25 @@
+    When i was given this assignment I was shown the finished product and felt
+a little overwhelmed as I saw alot of moving parts and began doubting if i could even build something 
+like this. I followed a problem solving procedure called Polya. My first goal
+was to fully undertstand the problem and goals. I reserached Conway's game of life and 
+fully understood the rules and theory behind it then i formulated  aplan to start.
+Since this was a front-end assignment, I decided to use react since I am very fmiliar
+with this framework and it allows for great production builds. Once that was decided, my first step
+was to decide on a method to build a grid system. I was originally using canvas but i couldnt quite figure
+out how to properly display the grid. After hours of struggling I decided to try using a 2D array as 
+my grid system. I declraed the 2D array and filled it with a div I styled to be a box and then I ran
+the program and the grid system displayed perfectly as planned. Once that was done I rendered the title and the game rules
+onto the screen. I then planned out the color scheme and added the buttons: start, pause, clear, and seed. Of course, the 
+buttons at this point didnt do anything but I had my basic layout and i was content. This was around the end of the second day and
+I wanted to reserach how to implement the game before finishing. I tried looking at various resources and it was getting
+really confusing and frustrating. I went to bed that day pretty upset I almost elt like I couldnt get rest until I figured it out.
+Sometimes it is just really hard for me to let go of something when it is on my mind but I hope it is a 
+skill I get better at as I continue my develoment journey. The morning after I sought help and after hours of 
+coding and trying different things I was finally getting somehere. I found a good guide and refactored my code and after long, hard hours of work
+my cells were breathing, living and dying. It was beautiful. Great feeling when hard work gets rewarded. After this was done I then moved
+to configure my buttons. I added the fubnctionality for start, pause, clear, and seed. I made an executive
+decision for the grid to be seeded as soon as you load the page so users can just hit start and watch it go. My site was finished and after some 
+styling changes I was ready to deploy. The deployment gave me issues as I had a folder created by create-react-app inside my main repo and for some 
+reason the deployment wasnt workin because of this. I took out all the contents from the folder and retried and this did it. I deployed my site onto herokku
+and completed the assignmnet. It was a long journey to do this but I felt I gained alot of skills from this and grew as a developer. I had a lot of fun and 
+hope you enjoy the app: https://conways-life-game.herokuapp.com/
